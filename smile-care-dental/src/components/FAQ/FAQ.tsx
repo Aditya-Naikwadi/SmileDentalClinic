@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./FAQ.module.css";
+import ScrollReveal from "../ScrollReveal";
 
 const faqs = [
   {
@@ -28,26 +29,29 @@ const FAQ = () => {
   return (
     <section id="faq" className={styles.faq}>
       <div className="container">
-        <div className={styles.header}>
+        <ScrollReveal className={styles.header}>
           <h2 className={styles.title}>Frequently Asked Questions</h2>
           <p className={styles.subtitle}>Everything you need to know about our services and policies.</p>
-        </div>
+        </ScrollReveal>
 
         <div className={styles.list}>
           {faqs.map((faq, idx) => (
-            <div 
-              key={idx} 
-              className={`${styles.item} ${openIdx === idx ? styles.open : ""}`}
-              onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-            >
-              <div className={styles.question}>
-                <span>{faq.question}</span>
-                <span className={styles.icon}>{openIdx === idx ? "−" : "+"}</span>
+            <ScrollReveal key={idx} delay={idx * 100}>
+              <div 
+                className={`${styles.item} ${openIdx === idx ? styles.open : ""} glass-effect`}
+                onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+              >
+                <div className={styles.question}>
+                  <span>{faq.question}</span>
+                  <div className={styles.iconWrapper}>
+                    <span className={styles.icon}>{openIdx === idx ? "−" : "+"}</span>
+                  </div>
+                </div>
+                <div className={styles.answer}>
+                  <p>{faq.answer}</p>
+                </div>
               </div>
-              <div className={styles.answer}>
-                <p>{faq.answer}</p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

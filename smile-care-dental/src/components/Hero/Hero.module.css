@@ -2,10 +2,33 @@
   position: relative;
   min-height: 100vh;
   display: flex;
+  min-height: 90vh;
+  display: flex;
   align-items: center;
+  background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at bottom left, rgba(10, 25, 47, 0.02) 0%, transparent 30%);
+  padding-top: 100px;
+  position: relative;
   overflow: hidden;
-  background: var(--background);
-  padding-top: 120px;
+}
+
+.glow {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: var(--secondary);
+  filter: blur(150px);
+  opacity: 0.08;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.content {
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -21,18 +44,25 @@
   background: rgba(16, 185, 129, 0.1);
   color: var(--secondary);
   border-radius: 50px;
+  font-weight: 700;
   font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .title {
-  font-size: 4rem;
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-bottom: 2rem;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
-  font-weight: 800;
+}
+
+.title span {
+  background: var(--grad-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .highlight {
@@ -48,40 +78,54 @@
   max-width: 540px;
 }
 
+.description {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
 .ctaGroup {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 4rem;
 }
 
+.actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .primaryBtn {
+  padding: 1.25rem 2.5rem;
   background: var(--primary);
   color: var(--white);
-  padding: 1rem 2.5rem;
   border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: var(--shadow-lg);
 }
 
 .primaryBtn:hover {
-  background: var(--secondary);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--shadow-xl);
+  background: #1a365d;
 }
 
 .secondaryBtn {
-  background: transparent;
+  padding: 1.25rem 2.5rem;
+  background: var(--white);
   color: var(--primary);
-  padding: 1rem 2.5rem;
   border-radius: 50px;
-  font-weight: 600;
-  border: 2px solid var(--primary);
-  transition: all 0.3s ease;
+  font-weight: 700;
+  border: 1px solid var(--gray-200);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .secondaryBtn:hover {
-  background: var(--primary);
-  color: var(--white);
+  border-color: var(--secondary);
+  color: var(--secondary);
+  transform: translateY(-5px);
 }
 
 .stats {

@@ -1,79 +1,81 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
 import styles from "./Hero.module.css";
+import ScrollReveal from "../ScrollReveal";
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      <div className={`${styles.container} container`}>
-        <div className={styles.content}>
-          <div className={styles.badge}>Next Generation Dental Care</div>
-          <h1 className={styles.title}>
-            Experience the <span className={styles.highlight}>Future of Dentistry</span> Today
-          </h1>
-          <p className={styles.subtitle}>
-            Premium care, cutting-edge technology, and a soothing environment 
-            designed to give you the perfect smile you&apos;ve always wanted.
-          </p>
-          <div className={styles.ctaGroup}>
-            <Link href="#booking" className={styles.primaryBtn}>
-              Schedule Appointment
-            </Link>
-            <Link href="#services" className={styles.secondaryBtn}>
-              Explore Services
-            </Link>
+      <div className={`${styles.glow} delay-100`}></div>
+        <div className={styles.container}>
+          <div className={styles.content}>
+            <ScrollReveal>
+              <span className={styles.badge}>Award Winning Practice 2024</span>
+              <h1 className={styles.title}>
+                Luxury Dental Care <br />
+                <span>For Your Best Smile</span>
+              </h1>
+              <p className={styles.description}>
+                Redefining dental excellence in India. Discover a sanctuary of oral wellness where cutting-edge technology meets world-class hospitality.
+              </p>
+              <div className={styles.actions}>
+                <Link href="#booking" className={styles.primaryBtn}>
+                  Book Consultation
+                </Link>
+                <Link href="#services" className={styles.secondaryBtn}>
+                  Explore Services
+                </Link>
+              </div>
+
+              <div className={styles.stats}>
+                <div className={styles.statItem}>
+                  <span className={styles.statNumber}>15k+</span>
+                  <span className={styles.statLabel}>Happy Smiles</span>
+                </div>
+                <div className={styles.divider}></div>
+                <div className={styles.statItem}>
+                  <span className={styles.statNumber}>25+</span>
+                  <span className={styles.statLabel}>Specialists</span>
+                </div>
+                <div className={styles.divider}></div>
+                <div className={styles.statItem}>
+                  <span className={styles.statNumber}>15y+</span>
+                  <span className={styles.statLabel}>Experience</span>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
-          <div className={styles.stats}>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>15k+</span>
-              <span className={styles.statLabel}>Happy Patients</span>
-            </div>
-            <div className={styles.divider}></div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>25+</span>
-              <span className={styles.statLabel}>Expert Doctors</span>
-            </div>
-            <div className={styles.divider}></div>
-            <div className={styles.statItem}>
-              <span className={styles.statNumber}>12</span>
-              <span className={styles.statLabel}>Awards Won</span>
-            </div>
-          </div>
-        </div>
-        
-        <div className={styles.visual}>
-          <div className={styles.heroImage}>
-            <Image 
-              src="/hero.png" 
-              alt="SmileCare Dental Modern Clinic" 
-              width={600} 
-              height={700} 
-              priority
-              className={styles.mainImg}
-            />
-            <div className={`${styles.floatingCard} glass-effect`}>
-              <div className={styles.cardHeader}>
-                <div className={styles.icon}>✨</div>
-                <div>
-                  <h4>Modern Tech</h4>
-                  <p>AI-Driven Diagnosis</p>
+
+          <ScrollReveal delay={300} className={styles.visual}>
+            <div className={styles.imageWrapper}>
+              <img 
+                src="/hero.png" 
+                alt="Luxury Dental Clinic" 
+                className={styles.heroImage} 
+              />
+              <div className={`${styles.floatingCard} glass-effect`}>
+                <div className={styles.cardHeader}>
+                  <div className={styles.icon}>⭐</div>
+                  <div>
+                    <h4>4.9/5 Rating</h4>
+                    <p>Google Reviews</p>
+                  </div>
+                </div>
+              </div>
+              <div className={`${styles.floatingCard2} glass-effect`}>
+                <div className={styles.cardHeader}>
+                  <div className={styles.icon}>🛡️</div>
+                  <div>
+                    <h4>Safe & Sterile</h4>
+                    <p>US-FDA Certified</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className={`${styles.floatingCard2} glass-effect`}>
-              <div className={styles.cardHeader}>
-                <div className={styles.icon}>🏥</div>
-                <div>
-                  <h4>Full Care</h4>
-                  <p>24/7 Support</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div className={styles.bgGlow}></div>
+          </ScrollReveal>
         </div>
-      </div>
-      
-      <div className={styles.bgGlow}></div>
     </section>
   );
 };

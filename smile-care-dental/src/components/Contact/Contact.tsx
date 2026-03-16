@@ -1,49 +1,54 @@
+"use client";
+
 import styles from "./Contact.module.css";
+import ScrollReveal from "../ScrollReveal";
 
 const Contact = () => {
   return (
     <section id="contact" className={styles.contact}>
       <div className="container">
-        <div className={styles.wrapper}>
-          <div className={styles.info}>
-            <h2 className={styles.title}>Get in Touch</h2>
-            <p className={styles.subtitle}>We&apos;re here to help you achieve your best smile. Visit us or reach out via any channel.</p>
-            
-            <div className={styles.details}>
-              <div className={styles.item}>
+        <ScrollReveal>
+          <div className={styles.wrapper}>
+            <div className={styles.content}>
+              <h2 className={styles.title}>Get in Touch</h2>
+              <p className={styles.subtitle}>
+                We&apos;re here to answer any questions you may have about our 
+                services or your upcoming visit.
+              </p>
+              
+              <div className={styles.details}>
+                <div className={styles.item}>
+                  <div className={styles.icon}>📞</div>
+                  <div className={styles.text}>
+                    <h4>Phone</h4>
+                    <p>+91 22 5550 1234</p>
+                  </div>
+                </div>
+                <div className={styles.item}>
+                  <div className={styles.icon}>✉️</div>
+                  <div className={styles.text}>
+                    <h4>Email</h4>
+                    <p>hello@smilecare.com</p>
+                  </div>
+                </div>
+                <div className={styles.infoItem}>
                 <span className={styles.icon}>📍</span>
                 <div>
-                  <h4>Location</h4>
-                  <p>123 Dental Street, Medical Plaza, Suite 405</p>
+                  <h4>Visit Our Clinic</h4>
+                  <p>12th Floor, Elite Tower, BKC, Mumbai 400051</p>
                 </div>
               </div>
-              <div className={styles.item}>
-                <span className={styles.icon}>📞</span>
-                <div>
-                  <h4>Phone</h4>
-                  <p>+1 (555) 000-1234</p>
-                </div>
-              </div>
-              <div className={styles.item}>
-                <span className={styles.icon}>✉️</span>
-                <div>
-                  <h4>Email</h4>
-                  <p>care@smilecaredental.com</p>
-                </div>
               </div>
             </div>
 
-            <div className={styles.social}>
-              <a href="#" className={styles.whatsapp}>Chat on WhatsApp</a>
-            </div>
+            <ScrollReveal delay={200} className={styles.map}>
+              <div className={`${styles.mapPlaceholder} glass-effect`}>
+                <p>Interactive Map Integration</p>
+                <span>(Load Google Maps)</span>
+              </div>
+            </ScrollReveal>
           </div>
-
-          <div className={styles.map}>
-            <div className={styles.mapPlaceholder}>
-              <p>Map Placeholder - Medical Plaza</p>
-            </div>
-          </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

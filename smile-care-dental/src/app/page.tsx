@@ -3,6 +3,8 @@ import Hero from "@/components/Hero/Hero";
 import Services from "@/components/Services/Services";
 import Doctors from "@/components/Doctors/Doctors";
 import Booking from "@/components/Booking/Booking";
+import Loader from "@/components/Loader/Loader";
+import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import Portal from "@/components/Portal/Portal";
 import Gallery from "@/components/Gallery/Gallery";
 import Intake from "@/components/Intake/Intake";
@@ -17,6 +19,8 @@ import Chatbot from "@/components/Chatbot/Chatbot";
 export default function Home() {
   return (
     <main>
+      <Loader />
+      <SmoothScroll />
       <Navbar />
       <Hero />
       <Services />

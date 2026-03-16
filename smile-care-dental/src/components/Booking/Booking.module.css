@@ -1,173 +1,195 @@
 .booking {
-  background: var(--white);
-  padding: 100px 0;
+  background: var(--gray-50);
 }
 
 .wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 6rem;
-  align-items: center;
+  grid-template-columns: 1fr 1.5fr;
+  min-height: 650px;
+  background: var(--white);
 }
 
-.title {
-  font-size: 2.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
-}
-
-.benefits {
+.sidebar {
+  background: var(--grad-primary);
+  color: var(--white);
+  padding: 5rem 4rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.benefit {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-.bIcon {
-  color: var(--secondary);
-}
-
-.card {
-  padding: 3rem;
-  border-radius: 30px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
-}
-
-.progress {
-  display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
-  position: relative;
+}
+
+.sidebar h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .step {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  z-index: 2;
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  font-weight: 600;
+  gap: 1.5rem;
+  opacity: 0.4;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.stepCircle {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background: var(--gray-200);
+.stepActive {
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+.stepNumber {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1.5px solid var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
   font-size: 0.9rem;
-  color: var(--white);
-  transition: all 0.3s ease;
 }
 
-.step.active {
-  color: var(--primary);
-}
-
-.step.active .stepCircle {
+.stepActive .stepNumber {
   background: var(--secondary);
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+  border-color: var(--secondary);
 }
 
 .formContent {
-  min-height: 250px;
+  padding: 5rem 4rem;
+  background: var(--white);
 }
 
-.stepContent h3 {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+.formInner h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--primary);
 }
 
-.options, .times {
+.options {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.option, .timeSlot {
-  padding: 1rem;
-  border: 1px solid var(--gray-200);
-  background: var(--white);
-  border-radius: 12px;
+.option {
+  padding: 2rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 24px;
+  background: transparent;
+  text-align: left;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-.option:hover, .timeSlot:hover {
+.option:hover {
   border-color: var(--secondary);
+  background: var(--gray-50);
+}
+
+.optionActive {
+  border-color: var(--secondary);
+  background: rgba(16, 185, 129, 0.05);
   color: var(--secondary);
 }
 
-.selected {
-  background: var(--primary) !important;
-  color: var(--white) !important;
-  border-color: var(--primary) !important;
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .input {
   width: 100%;
-  padding: 1rem;
-  border: 1px solid var(--gray-200);
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  font-family: inherit;
+  padding: 1.25rem 1.5rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 16px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-.controls {
+.input:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.timeBtn {
+  padding: 1rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 12px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeBtn:hover {
+  border-color: var(--secondary);
+}
+
+.timeActive {
+  background: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+}
+
+.footer {
+  margin-top: 3rem;
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
-}
-
-.nextBtn {
-  flex-grow: 1;
-  padding: 1rem;
-  background: var(--primary);
-  color: var(--white);
-  border: none;
-  border-radius: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.nextBtn:hover {
-  background: var(--secondary);
 }
 
 .backBtn {
   padding: 1rem 2rem;
-  background: transparent;
-  border: 1px solid var(--gray-200);
-  border-radius: 12px;
-  font-weight: 600;
+  border: none;
+  background: var(--gray-100);
+  border-radius: 50px;
+  font-weight: 700;
   cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-  .wrapper { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
-  .benefits { align-items: center; }
+.nextBtn, .submitBtn {
+  flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  .options, .times { grid-template-columns: 1fr; }
-  .card { padding: 2rem; }
+.nextBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nextBtn:hover:not(:disabled) {
+  background: var(--secondary);
+}
+
+@media (max-width: 900px) {
+  .wrapper { grid-template-columns: 1fr; }
+  .sidebar { padding: 3rem; }
+  .formContent { padding: 3rem; }
+  .options { grid-template-columns: 1fr; }
 }

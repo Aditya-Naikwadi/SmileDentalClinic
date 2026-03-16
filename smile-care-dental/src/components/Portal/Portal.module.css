@@ -53,9 +53,9 @@
 }
 
 .activeTab {
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.1);
-  border-left-color: var(--secondary);
+  background: var(--white);
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .main {
@@ -63,14 +63,21 @@
   background: var(--white);
 }
 
-.chartView h3 {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
+.chartHeader {
+  margin-bottom: 3rem;
 }
 
-.chartView p {
-  color: var(--text-muted);
-  margin-bottom: 2rem;
+.chartHeader h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.chartContainer {
+  background: var(--gray-50);
+  padding: 3rem;
+  border-radius: 32px;
+  border: 1px solid var(--gray-100);
 }
 
 .placeholder {
@@ -80,20 +87,45 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 1.5rem;
 }
 
-.loader {
-  width: 50px;
-  height: 50px;
-  border: 3px solid var(--gray-200);
-  border-top-color: var(--secondary);
-  border-radius: 50%;
-  margin-top: 2rem;
-  animation: spin 1s linear infinite;
+.pulseIcon {
+  font-size: 3rem;
+  animation: pulse 2s infinite;
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.progressBar {
+  width: 200px;
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 60%;
+  height: 100%;
+  background: var(--secondary);
+  border-radius: 10px;
+  animation: loading 3s infinite;
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@media (max-width: 991px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {

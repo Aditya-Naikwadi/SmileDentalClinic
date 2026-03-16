@@ -1,22 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./Doctors.module.css";
+import ScrollReveal from "../ScrollReveal";
 
 const doctors = [
   {
-    name: "Dr. James Sterling",
-    role: "Cosmetic Dentist",
-    image: "/doc1.png",
-    rating: 5.0,
-    reviews: 124,
-    bio: "Excellence in aesthetic smile transformations with over 15 years of experience."
+    name: "Dr. Alexander Knight",
+    specialty: "Senior Orthodontist",
+    image: "/dentist_male_1.png",
+    bio: "With over 15 years of experience in reconstructive dentistry and modern orthodontics."
   },
   {
-    name: "Dr. Sarah Miller",
-    role: "Orthodontist",
-    image: "/doc2.png",
-    rating: 4.9,
-    reviews: 98,
-    bio: "Specializing in advanced Invisalign and modern teeth alignment techniques."
+    name: "Dr. Sarah Chen",
+    specialty: "Cosmetic Specialist",
+    image: "/dentist_female_1.png",
+    bio: "Expert in aesthetic transformations and advanced porcelain veneer applications."
+  },
+  {
+    name: "Dr. Michael Ross",
+    specialty: "Pediatric Dentist",
+    image: "/dentist_male_2.png",
+    bio: "Dedicated to making dental visits a fun and educational experience for children."
   }
 ];
 
@@ -24,36 +29,35 @@ const Doctors = () => {
   return (
     <section id="doctors" className={styles.doctors}>
       <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>Meet Our Experts</h2>
+        <ScrollReveal className={styles.header}>
+          <h2 className={styles.title}>Meet Our Specialists</h2>
           <p className={styles.subtitle}>
-            A team of world-class specialists dedicated to your dental health and aesthetic goals.
+            A team of world-class professionals dedicated to your clinical excellence 
+            and emotional comfort.
           </p>
-        </div>
+        </ScrollReveal>
         
         <div className={styles.grid}>
           {doctors.map((doctor, index) => (
-            <div key={index} className={styles.card}>
-              <div className={styles.imageArea}>
-                <Image 
-                  src={doctor.image} 
-                  alt={doctor.name} 
-                  width={400} 
-                  height={500} 
-                  className={styles.docImage}
-                />
-                <div className={`${styles.stats} glass-effect`}>
-                  <span className={styles.rating}>⭐ {doctor.rating}</span>
-                  <span className={styles.reviews}>{doctor.reviews} Reviews</span>
+            <ScrollReveal key={index} delay={index * 150}>
+              <div className={styles.card}>
+                <div className={styles.imageWrapper}>
+                  <Image 
+                    src={doctor.image} 
+                    alt={doctor.name} 
+                    fill 
+                    className={doctor.name === "Dr. Alexander Knight" ? styles.knightImage : ""}
+                  />
+                  <div className={styles.overlay}>
+                    <p className={styles.bio}>{doctor.bio}</p>
+                  </div>
+                </div>
+                <div className={styles.info}>
+                  <h3 className={styles.name}>{doctor.name}</h3>
+                  <p className={styles.specialty}>{doctor.specialty}</p>
                 </div>
               </div>
-              <div className={styles.info}>
-                <h3 className={styles.docName}>{doctor.name}</h3>
-                <span className={styles.docRole}>{doctor.role}</span>
-                <p className={styles.docBio}>{doctor.bio}</p>
-                <button className={styles.bookBtn}>Book Consultation</button>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import styles from "./Testimonials.module.css";
+import ScrollReveal from "../ScrollReveal";
 
 const testimonials = [
   {
@@ -25,26 +26,28 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className={styles.testimonials}>
       <div className="container">
-        <div className={styles.header}>
+        <ScrollReveal className={styles.header}>
           <h2 className={styles.title}>What Our Patients Say</h2>
           <p className={styles.subtitle}>Real stories from people who trusted us with their smiles.</p>
-        </div>
+        </ScrollReveal>
 
         <div className={styles.grid}>
           {testimonials.map((t, idx) => (
-            <div key={idx} className={styles.card}>
-              <div className={styles.quote}>&quot;</div>
-              <p className={styles.text}>{t.text}</p>
-              <div className={styles.rating}>
-                {Array.from({ length: t.stars }).map((_, i) => (
-                  <span key={i}>⭐</span>
-                ))}
+            <ScrollReveal key={idx} delay={idx * 150}>
+              <div className={`${styles.card} glass-effect`}>
+                <div className={styles.quote}>&quot;</div>
+                <p className={styles.text}>{t.text}</p>
+                <div className={styles.rating}>
+                  {Array.from({ length: t.stars }).map((_, i) => (
+                    <span key={i} className={styles.star}>⭐</span>
+                  ))}
+                </div>
+                <div className={styles.author}>
+                  <strong>{t.name}</strong>
+                  <span>{t.role}</span>
+                </div>
               </div>
-              <div className={styles.author}>
-                <strong>{t.name}</strong>
-                <span>{t.role}</span>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

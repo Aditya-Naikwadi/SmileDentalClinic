@@ -20,9 +20,13 @@
 }
 
 .comparisonWrapper {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  aspect-ratio: 16/9;
 }
 
 .comparisonContainer {

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmileCare Dental | Premium Dental Care</title>
+    <meta name="description" content="Experience premium dental care at SmileCare Dental. Professional, modern, and trustworthy services for your healthiest smile.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="dental-logo-anim">
+                <i class="fas fa-tooth"></i>
+            </div>
+            <p>SmileCare Dental</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-tooth"></i>
+                <span>SmileCare</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact" class="nav-cta-mobile">Book Now</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#booking" class="btn btn-primary nav-cta">Book Appointment</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu" title="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container hero-content">
+                <div class="hero-text animate-up">
+                    <span class="badge">Trusted by 10,000+ Patients</span>
+                    <h1>Your Healthiest Smile <br><span class="text-accent">Starts Here</span></h1>
+                    <p>Experience world-class dental care with a personal touch. Our expert team uses state-of-the-art technology to ensure your comfort and long-term oral health.</p>
+                    <div class="hero-btns">
+                        <a href="#booking" class="btn btn-primary">Book Appointment</a>
+                        <a href="#services" class="btn btn-outline">View Services</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual animate-fade">
+                    <div class="hero-main-img">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop" alt="Modern Dental Clinic">
+                    </div>
+                    
+                    <!-- Stats Cards -->
+                    <div class="stat-card stat-1 animate-float">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-info">
+                            <h3>10K+</h3>
+                            <p>Happy Patients</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-2 animate-float delay-1s">
+                        <div class="stat-icon"><i class="fas fa-award"></i></div>
+                        <div class="stat-info">
+                            <h3>15 Yrs</h3>
+                            <p>Experience</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-3 animate-float delay-2s">
+                        <div class="stat-icon"><i class="fas fa-star"></i></div>
+                        <div class="stat-info">
+                            <h3>4.9★</h3>
+                            <p>Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <div class="section-header animate-up">
+                    <span class="badge">Our Expertise</span>
+                    <h2>Comprehensive Dental Solutions</h2>
+                    <p>We provide a wide range of oral health services tailored to your specific needs, using the latest clinical techniques.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card animate-up">
+                        <div class="service-icon"><i class="fas fa-pump-medical"></i></div>
+                        <h3>Routine Cleaning</h3>
+                        <p>Professional cleaning to remove plaque and tartar, ensuring fresh breath and healthy gums.</p>
+                        <ul class="service-meta">
+                            <li><i class="far fa-clock"></i> 45 - 60 mins</li>
+                            <li><i class="fas fa-tag"></i> ₹1,500 - ₹3,000</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Book This Service</a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card animate-up">
+                        <div class="service-icon"><i class="fas fa-tooth"></i></div>
+                        <h3>Teeth Whitening</h3>
+                        <p>Brighten your smile by several shades in just one session using our advanced laser technology.</p>
+                        <ul class="service-meta">
+                            <li><i class="far fa-clock"></i> 60 - 90 mins</li>
+                            <li><i class="fas fa-tag"></i> ₹10,000 - ₹25,000</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Book This Service</a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card animate-up">
+                        <div class="service-icon"><i class="fas fa-teeth"></i></div>
+                        <h3>Dental Implants</h3>
+                        <p>Permanent, natural-looking tooth replacement that restores both function and confidence.</p>
+                        <ul class="service-meta">
+                            <li><i class="far fa-clock"></i> 2 - 4 hours</li>
+                            <li><i class="fas fa-tag"></i> ₹40,000 - ₹1,20,000</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Book This Service</a>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card animate-up">
+                        <div class="service-icon"><i class="fas fa-grip-lines"></i></div>
+                        <h3>Braces & Orthodontics</h3>
+                        <p>Straighten misaligned teeth with traditional braces or discreet clear aligners (Invisalign).</p>
+                        <ul class="service-meta">
+                            <li><i class="far fa-clock"></i> 18 - 24 months</li>
+                            <li><i class="fas fa-tag"></i> ₹45,000 - ₹3,50,000</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Book This Service</a>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="service-card animate-up">
+                        <div class="service-icon"><i class="fas fa-microscope"></i></div>
+                        <h3>Root Canal</h3>
+                        <p>Save your natural tooth with our virtually painless root canal procedures and high-quality crowns.</p>
+                        <ul class="service-meta">
+                            <li><i class="far fa-clock"></i> 60 - 90 mins</li>
+                            <li><i class="fas fa-tag"></i> ₹6,000 - ₹15,000</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Book This Service</a>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="service-card animate-up">
+                        <div class="service-icon"><i class="fas fa-fill-drip"></i></div>
+                        <h3>Cavity Filling</h3>
+                        <p>Durable, tooth-colored composite resins that blend seamlessly with your natural enamel.</p>
+                        <ul class="service-meta">
+                            <li><i class="far fa-clock"></i> 30 - 45 mins</li>
+                            <li><i class="fas fa-tag"></i> ₹1,500 - ₹5,000</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Book This Service</a>
+                    </div>
+                    <!-- Service 7 -->
+                    <div class="service-card animate-up">
+                        <div class="service-icon"><i class="fas fa-child"></i></div>
+                        <h3>Paediatric Dentistry</h3>
+                        <p>Specialized, gentle care for our youngest patients in a fun and anxiety-free environment.</p>
+                        <ul class="service-meta">
+                            <li><i class="far fa-clock"></i> 30 - 60 mins</li>
+                            <li><i class="fas fa-tag"></i> ₹2,000 - ₹8,000</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Book This Service</a>
+                    </div>
+                    <!-- Service 8 -->
+                    <div class="service-card animate-up">
+                        <div class="service-icon"><i class="fas fa-gem"></i></div>
+                        <h3>Cosmetic Dentistry</h3>
+                        <p>Veneers, bonding, and full smile makeovers to give you the perfect aesthetic profile.</p>
+                        <ul class="service-meta">
+                            <li><i class="far fa-clock"></i> Varies</li>
+                            <li><i class="fas fa-tag"></i> ₹15,000+</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Book This Service</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section id="trust" class="trust section-padding">
+            <div class="trust-bg-overlay"></div>
+            <div class="container">
+                <div class="section-header animate-up text-center">
+                    <span class="badge badge-trust">Why Choose Us</span>
+                    <h2 class="text-white">Uncompromised Care & Excellence</h2>
+                </div>
+                
+                <div class="trust-grid">
+                    <div class="trust-pill animate-up">
+                        <i class="fas fa-user-md"></i>
+                        <h4>Certified Dentists</h4>
+                        <p>Award-winning specialists with global certifications.</p>
+                    </div>
+                    <div class="trust-pill animate-up">
+                        <i class="fas fa-heartbeat"></i>
+                        <h4>Painless Procedures</h4>
+                        <p>Advanced sedation and micro-dentistry techniques.</p>
+                    </div>
+                    <div class="trust-pill animate-up">
+                        <i class="fas fa-vial"></i>
+                        <h4>Latest Equipment</h4>
+                        <p>3D Imaging, Laser Surgery, and Digital Scanners.</p>
+                    </div>
+                    <div class="trust-pill animate-up">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Flexible Timings</h4>
+                        <p>Evening and weekend slots for busy professionals.</p>
+                    </div>
+                    <div class="trust-pill animate-up">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h4>Affordable Pricing</h4>
+                        <p>Transparent rates with 0% interest EMI options.</p>
+                    </div>
+                    <div class="trust-pill animate-up">
+                        <i class="fas fa-ambulance"></i>
+                        <h4>Emergency Care</h4>
+                        <p>24/7 priority support for urgent dental trauma.</p>
+                    </div>
+                </div>
+
+                <!-- Animated Counters -->
+                <div class="counter-row animate-up">
+                    <div class="counter-item">
+                        <h2 class="counter" data-target="10000">0</h2>
+                        <p>Happy Patients</p>
+                    </div>
+                    <div class="counter-item">
+                        <h2 class="counter" data-target="15">0</h2>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="counter-item">
+                        <h2 class="counter" data-target="25000">0</h2>
+                        <p>Procedures Done</p>
+                    </div>
+                    <div class="counter-item">
+                        <h2 class="counter" data-target="99">0</h2>
+                        <p>Satisfaction %</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section id="doctors" class="doctors section-padding">
+            <div class="container">
+                <div class="section-header animate-up">
+                    <span class="badge">Team of Experts</span>
+                    <h2>Meet Your Specialists</h2>
+                    <p>Our multidisciplinary team is dedicated to providing you with the highest standard of care.</p>
+                </div>
+                
+                <div class="doctors-grid">
+                    <!-- Dr 1 -->
+                    <div class="doctor-card animate-up">
+                        <div class="doctor-img">
+                            <div class="placeholder-avatar">RA</div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Rajesh Agarwal</h3>
+                            <p class="spec">Senior Orthodontist</p>
+                            <div class="stats">
+                                <span><i class="fas fa-user-clock"></i> 12+ Yrs</span>
+                                <span><i class="fas fa-star"></i> 4.9 (450+)</span>
+                            </div>
+                            <a href="#booking" class="btn btn-outline btn-full">Book appointment with Dr. Rajesh</a>
+                        </div>
+                    </div>
+                    <!-- Dr 2 -->
+                    <div class="doctor-card animate-up">
+                        <div class="doctor-img">
+                            <div class="placeholder-avatar avatar-sn">SN</div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Sarah Nelson</h3>
+                            <p class="spec">Implantologist</p>
+                            <div class="stats">
+                                <span><i class="fas fa-user-clock"></i> 8+ Yrs</span>
+                                <span><i class="fas fa-star"></i> 4.8 (320+)</span>
+                            </div>
+                            <a href="#booking" class="btn btn-outline btn-full">Book appointment with Dr. Sarah</a>
+                        </div>
+                    </div>
+                    <!-- Dr 3 -->
+                    <div class="doctor-card animate-up">
+                        <div class="doctor-img">
+                            <div class="placeholder-avatar avatar-vp">VP</div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Vikram Prasad</h3>
+                            <p class="spec">Cosmetic Dentist</p>
+                            <div class="stats">
+                                <span><i class="fas fa-user-clock"></i> 15+ Yrs</span>
+                                <span><i class="fas fa-star"></i> 5.0 (600+)</span>
+                            </div>
+                            <a href="#booking" class="btn btn-outline btn-full">Book appointment with Dr. Vikram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Booking Widget Section -->
+        <section id="booking" class="booking section-padding bg-light">
+            <div class="container">
+                <div class="section-header animate-up text-center">
+                    <span class="badge">Easy Scheduling</span>
+                    <h2>Book Your Appointment</h2>
+                    <p>Start your journey to a brighter smile in just a few clicks.</p>
+                </div>
+
+                <div class="booking-wrapper animate-up">
+                    <!-- Progress Bar -->
+                    <div class="booking-progress">
+                        <div class="progress-step active" data-step="1"><span>1</span><p>Service</p></div>
+                        <div class="progress-step" data-step="2"><span>2</span><p>Dentist</p></div>
+                        <div class="progress-step" data-step="3"><span>3</span><p>Time</p></div>
+                        <div class="progress-step" data-step="4"><span>4</span><p>Details</p></div>
+                    </div>
+
+                    <div class="booking-form-container">
+                        <!-- Step 1: Service -->
+                        <div class="booking-step active" id="step1">
+                            <h3>Select a Service</h3>
+                            <div class="chip-grid" id="service-chips">
+                                <div class="chip" data-value="Routine Cleaning">Routine Cleaning</div>
+                                <div class="chip" data-value="Teeth Whitening">Teeth Whitening</div>
+                                <div class="chip" data-value="Dental Implants">Dental Implants</div>
+                                <div class="chip" data-value="Braces">Braces</div>
+                                <div class="chip" data-value="Root Canal">Root Canal</div>
+                                <div class="chip" data-value="Cosmetic">Cosmetic</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Dentist -->
+                        <div class="booking-step" id="step2">
+                            <h3>Choose Your Doctor</h3>
+                            <div class="dentist-selector">
+                                <div class="dentist-option" data-value="Dr. Rajesh Agarwal">
+                                    <div class="option-avatar">RA</div>
+                                    <div class="option-info">
+                                        <h4>Dr. Rajesh Agarwal</h4>
+                                        <p>Senior Orthodontist</p>
+                                    </div>
+                                </div>
+                                <div class="dentist-option" data-value="Dr. Sarah Nelson">
+                                    <div class="option-avatar bg-primary">SN</div>
+                                    <div class="option-info">
+                                        <h4>Dr. Sarah Nelson</h4>
+                                        <p>Implantologist</p>
+                                    </div>
+                                </div>
+                                <div class="dentist-option" data-value="Dr. Vikram Prasad">
+                                    <div class="option-avatar bg-accent">VP</div>
+                                    <div class="option-info">
+                                        <h4>Dr. Vikram Prasad</h4>
+                                        <p>Cosmetic Dentist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Calendar & Time -->
+                        <div class="booking-step" id="step3">
+                            <div class="calendar-time-split">
+                                <div class="calendar-box">
+                                    <h3>Pick a Date</h3>
+                                    <div class="mock-calendar" id="calendar">
+                                        <!-- Mock calendar UI -->
+                                        <div class="cal-header">
+                                            <span>March 2026</span>
+                                        </div>
+                                        <div class="cal-days">
+                                            <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                                        </div>
+                                        <div class="cal-grid" id="calGrid">
+                                            <!-- JS will populate -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time-box">
+                                    <h3>Pick a Slot</h3>
+                                    <div class="time-grid" id="timeSlots">
+                                        <div class="time-slot" data-time="09:00 AM">09:00 AM</div>
+                                        <div class="time-slot booked" data-time="10:00 AM">10:00 AM (Full)</div>
+                                        <div class="time-slot" data-time="11:00 AM">11:00 AM</div>
+                                        <div class="time-slot" data-time="02:00 PM">02:00 PM</div>
+                                        <div class="time-slot booked" data-time="03:00 PM">03:00 PM (Full)</div>
+                                        <div class="time-slot" data-time="04:00 PM">04:00 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Details -->
+                        <div class="booking-step" id="step4">
+                            <h3>Patient Information</h3>
+                            <form class="details-form">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="tel" placeholder="Your mobile number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Additional Notes</label>
+                                    <textarea placeholder="Any medical conditions or concerns?"></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Step 5: Confirmation -->
+                        <div class="booking-step" id="step5">
+                            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                            <h3>Appointment Confirmed!</h3>
+                            <div class="summary-box">
+                                <p><strong>Service:</strong> <span id="summary-service">-</span></p>
+                                <p><strong>Doctor:</strong> <span id="summary-doctor">-</span></p>
+                                <p><strong>Date & Time:</strong> <span id="summary-datetime">-</span></p>
+                            </div>
+                            <button class="btn btn-primary" id="addToCal">Add to Calendar</button>
+                        </div>
+                    </div>
+
+                    <div class="booking-nav">
+                        <button class="btn btn-outline" id="prevBtn" disabled>Back</button>
+                        <button class="btn btn-primary" id="nextBtn">Next Step</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patient Portal Preview -->
+        <section id="portal" class="portal section-padding">
+            <div class="container">
+                <div class="section-header animate-up">
+                    <span class="badge">Patient Experience</span>
+                    <h2>Your Dental Health Dashboard</h2>
+                    <p>Track your treatments, view records, and manage billing through our intuitive patient portal.</p>
+                </div>
+
+                <div class="portal-mockup animate-up">
+                    <div class="portal-sidebar">
+                        <div class="p-tab active" data-tab="dashboard"><i class="fas fa-th-large"></i> Dashboard</div>
+                        <div class="p-tab" data-tab="appointments"><i class="fas fa-calendar-check"></i> Appointments</div>
+                        <div class="p-tab" data-tab="chart"><i class="fas fa-tooth"></i> Dental Chart</div>
+                        <div class="p-tab" data-tab="records"><i class="fas fa-file-medical-alt"></i> Clinical Records</div>
+                        <div class="p-tab" data-tab="billing"><i class="fas fa-receipt"></i> Billing</div>
+                    </div>
+                    <div class="portal-content">
+                        <!-- Dashboard Tab -->
+                        <div class="p-content active" id="dashboard">
+                            <h3>Welcome back, Sarah!</h3>
+                            <p>Here's an overview of your dental health and upcoming visits.</p>
+                            <div class="p-stats-grid">
+                                <div class="p-stat-box">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <div><h4>Next Visit</h4><p>March 25, 11:00 AM</p></div>
+                                </div>
+                                <div class="p-stat-box">
+                                    <i class="fas fa-smile"></i>
+                                    <div><h4>Last Cleaning</h4><p>Jan 12, 2026</p></div>
+                                </div>
+                                <div class="p-stat-box">
+                                    <i class="fas fa-credit-card"></i>
+                                    <div><h4>Balance</h4><p>₹1,200 (Paid)</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dental Chart Tab -->
+                        <div class="p-content" id="chart">
+                            <div class="chart-header">
+                                <h3>Interactive Dental Chart</h3>
+                                <div class="chart-legend">
+                                    <span class="legend-item"><span class="dot green"></span> Healthy</span>
+                                    <span class="legend-item"><span class="dot blue"></span> Filled</span>
+                                    <span class="legend-item"><span class="dot amber"></span> Crown</span>
+                                    <span class="legend-item"><span class="dot red"></span> Watch</span>
+                                    <span class="legend-item"><span class="dot gray"></span> Missing</span>
+                                </div>
+                            </div>
+                            
+                            <div class="dental-grid-wrapper">
+                                <div class="dental-row top-row">
+                                    <!-- 16 teeth top -->
+                                    <div class="tooth healthy" data-id="1" data-status="Healthy" data-date="Jan 12, 2026">1</div>
+                                    <div class="tooth healthy" data-id="2" data-status="Healthy" data-date="Jan 12, 2026">2</div>
+                                    <div class="tooth filled" data-id="3" data-status="Filled" data-date="Nov 05, 2025">3</div>
+                                    <div class="tooth healthy" data-id="4" data-status="Healthy" data-date="Jan 12, 2026">4</div>
+                                    <div class="tooth healthy" data-id="5" data-status="Healthy" data-date="Jan 12, 2026">5</div>
+                                    <div class="tooth watch" data-id="6" data-status="Watch" data-date="Jan 12, 2026">6</div>
+                                    <div class="tooth healthy" data-id="7" data-status="Healthy" data-date="Jan 12, 2026">7</div>
+                                    <div class="tooth healthy" data-id="8" data-status="Healthy" data-date="Jan 12, 2026">8</div>
+                                    <div class="tooth healthy" data-id="9" data-status="Healthy" data-date="Jan 12, 2026">9</div>
+                                    <div class="tooth healthy" data-id="10" data-status="Healthy" data-date="Jan 12, 2026">10</div>
+                                    <div class="tooth crown" data-id="11" data-status="Crown" data-date="Aug 14, 2024">11</div>
+                                    <div class="tooth healthy" data-id="12" data-status="Healthy" data-date="Jan 12, 2026">12</div>
+                                    <div class="tooth healthy" data-id="13" data-status="Healthy" data-date="Jan 12, 2026">13</div>
+                                    <div class="tooth healthy" data-id="14" data-status="Healthy" data-date="Jan 12, 2026">14</div>
+                                    <div class="tooth missing" data-id="15" data-status="Missing" data-date="N/A">15</div>
+                                    <div class="tooth healthy" data-id="16" data-status="Healthy" data-date="Jan 12, 2026">16</div>
+                                </div>
+                                <div class="dental-row bottom-row">
+                                    <!-- 16 teeth bottom -->
+                                    <div class="tooth healthy" data-id="32" data-status="Healthy" data-date="Jan 12, 2026">32</div>
+                                    <div class="tooth healthy" data-id="31" data-status="Healthy" data-date="Jan 12, 2026">31</div>
+                                    <div class="tooth healthy" data-id="30" data-status="Healthy" data-date="Jan 12, 2026">30</div>
+                                    <div class="tooth healthy" data-id="29" data-status="Healthy" data-date="Jan 12, 2026">29</div>
+                                    <div class="tooth filled" data-id="28" data-status="Filled" data-date="Dec 20, 2025">28</div>
+                                    <div class="tooth healthy" data-id="27" data-status="Healthy" data-date="Jan 12, 2026">27</div>
+                                    <div class="tooth healthy" data-id="26" data-status="Healthy" data-date="Jan 12, 2026">26</div>
+                                    <div class="tooth healthy" data-id="25" data-status="Healthy" data-date="Jan 12, 2026">25</div>
+                                    <div class="tooth healthy" data-id="24" data-status="Healthy" data-date="Jan 12, 2026">24</div>
+                                    <div class="tooth healthy" data-id="23" data-status="Healthy" data-date="Jan 12, 2026">23</div>
+                                    <div class="tooth healthy" data-id="22" data-status="Healthy" data-date="Jan 12, 2026">22</div>
+                                    <div class="tooth healthy" data-id="21" data-status="Healthy" data-date="Jan 12, 2026">21</div>
+                                    <div class="tooth healthy" data-id="20" data-status="Healthy" data-date="Jan 12, 2026">20</div>
+                                    <div class="tooth healthy" data-id="19" data-status="Healthy" data-date="Jan 12, 2026">19</div>
+                                    <div class="tooth healthy" data-id="18" data-status="Healthy" data-date="Jan 12, 2026">18</div>
+                                    <div class="tooth healthy" data-id="17" data-status="Healthy" data-date="Jan 12, 2026">17</div>
+                                </div>
+                                <div id="tooth-tooltip" class="tooth-tooltip">Select a tooth to see status.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing section-padding">
+            <div class="container">
+                <div class="section-header animate-up text-center">
+                    <span class="badge">Transparent Pricing</span>
+                    <h2>Affordable Dental Plans</h2>
+                    <p>Select the plan that best fits your household needs.</p>
+                </div>
+
+                <div class="pricing-toggle animate-up">
+                    <button class="toggle-btn active" data-type="individual">Individual</button>
+                    <button class="toggle-btn" data-type="family">Family Care</button>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card animate-up">
+                        <h3>Starter Care</h3>
+                        <div class="price">₹1,999<span> /year</span></div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> 2 Routine Cleanings</li>
+                            <li><i class="fas fa-check"></i> 1 Dental X-Ray</li>
+                            <li><i class="fas fa-check"></i> 15% Off Procedures</li>
+                            <li><i class="fas fa-check"></i> Annual Checkup</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured animate-up">
+                        <span class="p-tag">Best Value</span>
+                        <h3>Premium Smile</h3>
+                        <div class="price">₹4,999<span> /year</span></div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> 1 Teeth Whitening</li>
+                            <li><i class="fas fa-check"></i> 4 Professional Cleanings</li>
+                            <li><i class="fas fa-check"></i> Priority Booking</li>
+                            <li><i class="fas fa-check"></i> 25% Off Implants/Braces</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-primary btn-full">Go Premium</a>
+                    </div>
+                    <div class="pricing-card animate-up">
+                        <h3>Platinum Plan</h3>
+                        <div class="price">₹9,999<span> /year</span></div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Family Coverage (4 members)</li>
+                            <li><i class="fas fa-check"></i> Free Emergency Care</li>
+                            <li><i class="fas fa-check"></i> Comprehensive X-Rays</li>
+                            <li><i class="fas fa-check"></i> All Aesthetic Consultations</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline btn-full">Upgrade Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials section-padding">
+            <div class="container">
+                <div class="section-header animate-up text-center">
+                    <span class="badge badge-light">Success Stories</span>
+                    <h2 class="text-light">Patient Experiences</h2>
+                </div>
+
+                <div class="testimonial-card animate-up">
+                    <div class="testi-content">
+                        "I used to be terrified of the dentist. SmileCare team made me feel so comfortable that I actually look forward to my cleanings now. Highly recommend Dr. Vikram for cosmetic work!"
+                    </div>
+                    <div class="testi-user">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop" class="testi-avatar" alt="Patient">
+                        <div class="testi-info">
+                            <h4>Ananya Mishra</h4>
+                            <p>Premium Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq section-padding">
+            <div class="container">
+                <div class="section-header animate-up">
+                    <span class="badge">FAQ</span>
+                    <h2>Common Questions</h2>
+                </div>
+
+                <div class="faq-box animate-up">
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Are dental implants permanent? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer" id="faq-a1">
+                            Yes, dental implants are designed to be a permanent solution. They fuse with your jawbone through a process called osseointegration, providing a stable foundation that can last a lifetime with proper oral hygiene.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Does teeth whitening hurt? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer" id="faq-a2">
+                            Most patients experience little to no discomfort. Some may have temporary sensitivity to hot or cold for 24-48 hours after the procedure, which we manage with specialized gels.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">What insurance do you accept? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer" id="faq-a3">
+                            We accept all major health insurance providers in India, including Star Health, HDFC Ergo, and ICICI Lombard. We also offer 0% EMI options for major procedures.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery section-padding bg-light">
+            <div class="container">
+                <div class="section-header animate-up text-center">
+                    <span class="badge">Results</span>
+                    <h2>Smile Transformations</h2>
+                    <p>Real results from real patients. Move the slider to see the difference.</p>
+                </div>
+
+                <div class="ba-slider-container animate-up">
+                    <div class="ba-slider" id="baSlider">
+                        <div class="ba-img img-before"></div>
+                        <div class="ba-img img-after" id="imgAfter"></div>
+                        <div class="ba-handle" id="baHandle">
+                            <i class="fas fa-arrows-alt-h"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intake Form Section -->
+        <section class="intake-section section-padding">
+            <div class="container">
+                <div class="intake-card animate-up">
+                    <div class="section-header">
+                        <h2>Digital Intake</h2>
+                        <p>Save time at your first visit by filling out your forms online.</p>
+                    </div>
+                    <form class="intake-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="intake-dob">Date of Birth</label>
+                                <input type="date" id="intake-dob" title="Date of Birth">
+                            </div>
+                            <div class="form-group">
+                                <label for="intake-gender">Gender</label>
+                                <select id="intake-gender" class="form-control w-full" title="Select Gender" aria-label="Select Gender">
+                                    <option>Select</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Insurance Provider (Optional)</label>
+                            <input type="text" placeholder="e.g. Star Health">
+                        </div>
+                        <div class="form-group">
+                            <label>Health History Highlights</label>
+                            <div class="form-check">
+                                <input type="checkbox" title="Diabetes" aria-label="Diabetes"> <span>Diabetes</span>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" title="Heart Conditions" aria-label="Heart Conditions"> <span>Heart Conditions</span>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" title="Allergies" aria-label="Allergies"> <span>Allergies</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit Digital Records</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">SmileCare<span class="text-accent">Dental</span></div>
+                    <p class="footer-desc">Excellence in modern dentistry. We combine state-of-the-art technology with compassionate care to create your perfect smile.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Our Team</a></li>
+                        <li><a href="#gallery">Results</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Orthodontics</li>
+                        <li>Dental Implants</li>
+                        <li>Cosmetic Dentistry</li>
+                        <li>Teeth Whitening</li>
+                        <li>Oral Surgery</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <p class="footer-info">123 Healthcare Plaza, New Delhi, India 110001</p>
+                    <p class="footer-info"><strong>Mon - Sat:</strong> 9:00 AM - 8:00 PM</p>
+                    <p class="footer-info"><strong>Sun:</strong> Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmileCare Dental Clinic. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -79,6 +79,25 @@
   margin-bottom: 1.5rem;
 }
 
+.iconThemed {
+  width: 80px;
+  height: 80px;
+  background: var(--gray-100);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.card:hover .iconThemed {
+  background: var(--white);
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+}
+
 .cardTitle {
   font-size: 1.5rem;
   margin-bottom: 1rem;

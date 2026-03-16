@@ -46,15 +46,13 @@ const Doctors = () => {
                     src={doctor.image} 
                     alt={doctor.name} 
                     fill 
-                    className={doctor.name === "Dr. Alexander Knight" ? styles.knightImage : ""}
+                    className={styles.cardImage}
                   />
-                  <div className={styles.overlay}>
-                    <p className={styles.bio}>{doctor.bio}</p>
-                  </div>
                 </div>
                 <div className={styles.info}>
-                  <h3 className={styles.name}>{doctor.name}</h3>
                   <p className={styles.specialty}>{doctor.specialty}</p>
+                  <h3 className={styles.name}>{doctor.name}</h3>
+                  <p className={styles.bio}>{doctor.bio}</p>
                 </div>
               </div>
             </ScrollReveal>

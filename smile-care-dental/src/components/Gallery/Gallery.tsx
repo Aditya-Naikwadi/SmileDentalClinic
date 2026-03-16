@@ -1,12 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Gallery.module.css";
 import ScrollReveal from "../ScrollReveal";
 
 const Gallery = () => {
   const [sliderPos, setSliderPos] = useState(50);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const afterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.style.setProperty("--slider-pos", `${sliderPos}%`);
+    }
+    if (afterRef.current) {
+      afterRef.current.style.setProperty("--clip-path", `${sliderPos}%`);
+    }
+  }, [sliderPos]);
 
   const handleMove = (e: React.MouseEvent | React.TouchEvent) => {
     const container = e.currentTarget.getBoundingClientRect();
@@ -29,20 +40,28 @@ const Gallery = () => {
         <ScrollReveal delay={200}>
           <div 
             className={styles.comparisonWrapper}
-            style={{ "--slider-pos": `${sliderPos}%` } as React.CSSProperties}
             onMouseMove={handleMove}
             onTouchMove={handleMove}
           >
-            <div className={styles.comparisonContainer}>
+            <div 
+              ref={containerRef}
+              className={styles.comparisonContainer}
+            >
               <div 
+                ref={afterRef}
                 className={styles.afterImage} 
-                style={{ "--clip-path": `${sliderPos}%` } as React.CSSProperties}
               >
-                <Image src="/teeth_after.png" alt="After treatment" fill className={styles.image} priority />
+                <Image src="/after.png" alt="After treatment" fill className={styles.image} priority />
                 <div className={styles.badgeAfter}>After</div>
               </div>
               <div className={styles.beforeImage}>
-                <Image src="/teeth_before.png" alt="Before treatment" fill className={styles.image} priority />
+                <Image 
+                  src="/after.png" 
+                  alt="Before treatment" 
+                  fill 
+                  className={`${styles.image} ${styles.beforeFilter}`} 
+                  priority 
+                />
                 <div className={styles.badgeBefore}>Before</div>
               </div>
               <div className={styles.sliderHandle}>

@@ -47,23 +47,61 @@
 }
 
 .toothIcon {
-  font-size: 1.2rem;
-  filter: grayscale(1);
+  display: none;
+}
+
+.toothVisual {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--gray-100);
+  padding: 4px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toothSvg {
+  width: 100%;
+  height: 100%;
+  color: var(--gray-300);
   transition: all 0.3s ease;
 }
 
-.selected {
-  background: rgba(16, 185, 129, 0.1) !important;
-  border-color: var(--secondary) !important;
+.scanLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary);
+  opacity: 0;
+  z-index: 2;
+  box-shadow: 0 0 8px var(--secondary);
 }
 
-.selected .toothIcon {
-  filter: grayscale(0);
-  transform: scale(1.2);
+.selected .toothVisual {
+  background: rgba(16, 185, 129, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+.selected .toothSvg {
+  color: var(--secondary);
+}
+
+.selected .scanLine {
+  opacity: 1;
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
 }
 
 .selected .toothNumber {
   color: var(--secondary);
+  font-weight: 800;
 }
 
 .legend {

@@ -122,11 +122,11 @@ const Services = () => {
           {services.map((service, index) => (
             <ScrollReveal key={index} delay={index * 100}>
               <div className={styles.card} onClick={() => openModal(service)}>
-                <div className={styles.icon}>
+                <div className={`${styles.icon} ${styles.iconThemed}`}>
                   {service.icon.startsWith("/") ? (
-                    <Image src={service.icon} alt={service.title} width={64} height={64} />
+                    <Image src={service.icon} alt={service.title} width={64} height={64} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                   ) : (
-                    service.icon
+                    <span>{service.icon}</span>
                   )}
                 </div>
                 <h3 className={styles.cardTitle}>{service.title}</h3>

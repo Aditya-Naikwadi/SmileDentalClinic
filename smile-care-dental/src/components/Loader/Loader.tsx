@@ -18,8 +18,14 @@ const Loader = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.logo}>
-        <span className={styles.smile}>Smile</span>
-        <span className={styles.care}>Care</span>
+        <div className={styles.textWrapper}>
+          {"Smile".split("").map((l, i) => (
+            <span key={i} className={styles.letter}>{l}</span>
+          ))}
+          {"Care".split("").map((l, i) => (
+            <span key={i} className={`${styles.letter} ${styles.blue}`}>{l}</span>
+          ))}
+        </div>
         <div className={styles.line}></div>
       </div>
     </div>

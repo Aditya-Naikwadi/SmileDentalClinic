@@ -44,7 +44,9 @@ const FAQ = () => {
                 <div className={styles.question}>
                   <span>{faq.question}</span>
                   <div className={styles.iconWrapper}>
-                    <span className={styles.icon}>{openIdx === idx ? "−" : "+"}</span>
+                    <svg className={styles.chevron} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </div>
                 </div>
                 <div className={styles.answer}>

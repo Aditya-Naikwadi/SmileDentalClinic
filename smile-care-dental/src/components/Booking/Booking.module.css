@@ -188,8 +188,29 @@
 }
 
 @media (max-width: 900px) {
-  .wrapper { grid-template-columns: 1fr; }
-  .sidebar { padding: 3rem; }
-  .formContent { padding: 3rem; }
+  .wrapper { grid-template-columns: 1fr; min-height: initial; }
+  .sidebar { 
+    padding: 2.5rem 1.5rem; 
+    text-align: center;
+    gap: 2rem;
+  }
+  .sidebar p { display: none; }
+  .sidebar h2 { font-size: 2rem; }
+  .steps { 
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 1rem; 
+  }
+  .step span { display: none; }
+  .stepActive { transform: none; }
+  
+  .formContent { padding: 3rem 1.5rem; }
+  .formInner h3 { font-size: 1.5rem; margin-bottom: 2rem; text-align: center; }
   .options { grid-template-columns: 1fr; }
+  .option { padding: 1.5rem; }
+  .timeGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .timeGrid { grid-template-columns: 1fr 1fr; }
 }

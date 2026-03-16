@@ -70,33 +70,49 @@
   color: var(--white) !important;
   border-color: var(--primary);
   transform: scale(1.05);
-  box-shadow: 0 20px 50px rgba(10, 25, 47, 0.3);
+  box-shadow: 0 30px 70px rgba(10, 25, 47, 0.4);
+  overflow: hidden;
 }
 
-.recommended .planName,
-.recommended .priceArea,
-.recommended .features li {
-  color: var(--white) !important;
+.recommended::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 170deg,
+    rgba(255, 255, 255, 0.1) 180deg,
+    transparent 190deg,
+    transparent 360deg
+  );
+  animation: rotate 6s linear infinite;
+  pointer-events: none;
 }
 
-.recommended .period {
-  opacity: 0.9;
-}
-
-.recommended:hover {
-  transform: translateY(-15px) scale(1.05);
-  box-shadow: var(--shadow-2xl);
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .badge {
   position: absolute;
-  right: 20px;
+  top: 0;
+  right: 40px;
   background: var(--secondary);
   color: var(--white);
-  padding: 0.4rem 1rem;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 700;
+  padding: 0.6rem 1.2rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 
 .planName {

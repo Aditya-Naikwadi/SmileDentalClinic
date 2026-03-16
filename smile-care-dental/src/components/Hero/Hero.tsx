@@ -1,10 +1,21 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Hero.module.css";
 import ScrollReveal from "../ScrollReveal";
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 2100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isVisible) return <div className={styles.heroPlaceholder} />;
+
   return (
     <section className={styles.hero}>
       <div className={`${styles.glow} delay-100`}></div>
@@ -49,10 +60,12 @@ const Hero = () => {
 
           <ScrollReveal delay={300} className={styles.visual}>
             <div className={styles.imageWrapper}>
-              <img 
+              <Image 
                 src="/hero.png" 
                 alt="Luxury Dental Clinic" 
                 className={styles.heroImage} 
+                fill
+                priority
               />
               <div className={`${styles.floatingCard} glass-effect`}>
                 <div className={styles.cardHeader}>

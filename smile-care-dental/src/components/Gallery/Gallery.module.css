@@ -57,6 +57,9 @@
   object-fit: cover;
   display: block;
 }
+.beforeFilter {
+  filter: grayscale(0.8) brightness(0.9) sepia(0.2);
+}
 
 .badgeBefore, .badgeAfter {
   position: absolute;

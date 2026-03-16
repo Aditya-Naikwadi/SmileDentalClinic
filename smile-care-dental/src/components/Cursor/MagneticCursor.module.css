@@ -1,0 +1,50 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--secondary);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ring {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--secondary);
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hovering .ring {
+  width: 60px;
+  height: 60px;
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--secondary);
+  opacity: 0.6;
+}
+
+.hovering .dot {
+  transform: scale(0);
+  opacity: 0;
+}
+
+@media (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
+}

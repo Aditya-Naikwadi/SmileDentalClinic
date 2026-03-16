@@ -1,0 +1,11 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--grad-secondary);
+  z-index: 9999;
+  width: var(--scroll-width, 0%);
+  transition: width 0.1s ease;
+  pointer-events: none;
+}

@@ -1,0 +1,98 @@
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.arch {
+  text-align: center;
+}
+
+.archTitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.teethRow {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 0.5rem;
+}
+
+.tooth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.tooth:hover {
+  background: var(--gray-100);
+  border-color: var(--gray-200);
+}
+
+.toothNumber {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.toothIcon {
+  font-size: 1.2rem;
+  filter: grayscale(1);
+  transition: all 0.3s ease;
+}
+
+.selected {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border-color: var(--secondary) !important;
+}
+
+.selected .toothIcon {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+
+.selected .toothNumber {
+  color: var(--secondary);
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.clearBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.clearBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .teethRow { grid-template-columns: repeat(8, 1fr); gap: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .teethRow { grid-template-columns: repeat(4, 1fr); }
+}

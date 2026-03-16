@@ -1,0 +1,107 @@
+.footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 80px 0 40px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 4rem;
+  margin-bottom: 60px;
+}
+
+.brand .logo {
+  font-family: var(--font-playfair);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.smile { color: var(--white); }
+.care { color: var(--secondary); }
+.dental { font-weight: 400; font-size: 0.9rem; color: var(--gray-200); }
+
+.description {
+  color: var(--gray-200);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.linksGroup h3, .contact h3 {
+  font-family: var(--font-inter);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
+}
+
+.linksGroup ul {
+  list-style: none;
+}
+
+.linksGroup li {
+  margin-bottom: 0.8rem;
+}
+
+.linksGroup a {
+  color: var(--gray-200);
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.linksGroup a:hover {
+  color: var(--secondary);
+}
+
+.contact p {
+  color: var(--gray-200);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.phone {
+  font-weight: 700;
+  font-size: 1.1rem !important;
+  color: var(--white) !important;
+  margin-top: 1rem;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--gray-200);
+}
+
+.legal {
+  display: flex;
+  gap: 2rem;
+}
+
+.legal a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 1024px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}

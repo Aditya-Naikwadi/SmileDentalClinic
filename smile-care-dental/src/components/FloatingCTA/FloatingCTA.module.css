@@ -1,0 +1,29 @@
+.ctaWrapper {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2000;
+  display: none;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  color: var(--primary);
+  border: 1px solid var(--glass-border);
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .ctaWrapper {
+    display: block;
+  }
+}

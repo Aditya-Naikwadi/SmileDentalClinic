@@ -1,0 +1,139 @@
+.pricing {
+  background: var(--gray-100);
+  padding: 100px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.recommended {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.recommended:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.planName {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: inherit;
+}
+
+.priceArea {
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--font-playfair);
+}
+
+.period {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 3rem;
+  flex-grow: 1;
+}
+
+.features li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.features span {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 50px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.recommended .btn {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--primary);
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.recommended .btn:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--white);
+}
+
+@media (max-width: 1024px) {
+  .recommended { transform: scale(1); }
+  .recommended:hover { transform: translateY(-10px); }
+}

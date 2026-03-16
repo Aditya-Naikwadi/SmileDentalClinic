@@ -1,0 +1,80 @@
+.testimonials {
+  background: var(--white);
+  padding: 100px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  padding: 3rem;
+  background: var(--background);
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: var(--white);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.quote {
+  font-family: var(--font-playfair);
+  font-size: 4rem;
+  color: var(--secondary);
+  line-height: 1;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  opacity: 0.2;
+}
+
+.text {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.rating {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+}
+
+.author strong {
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.author span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}

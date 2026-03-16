@@ -1,0 +1,104 @@
+.portal {
+  background: var(--gray-100);
+  padding: 100px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 600px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+  background: var(--white);
+}
+
+.sidebar {
+  background: var(--primary);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  padding: 1.25rem 2.5rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.tab:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.activeTab {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  border-left-color: var(--secondary);
+}
+
+.main {
+  padding: 3rem;
+  background: var(--white);
+}
+
+.chartView h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.chartView p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--gray-200);
+  border-top-color: var(--secondary);
+  border-radius: 50%;
+  margin-top: 2rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+  .dashboard { grid-template-columns: 1fr; }
+  .sidebar { flex-direction: row; overflow-x: auto; padding: 0; }
+  .tab { padding: 1.5rem; white-space: nowrap; border-left: none; border-bottom: 3px solid transparent; }
+  .activeTab { border-bottom-color: var(--secondary); }
+}
